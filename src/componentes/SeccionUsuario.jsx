@@ -17,7 +17,7 @@ const UserInquilino = ({user}) => {
         <section className="seccion-usuario">
             <span className='user'>Welcome {user._name}</span>
             <span className='user'>
-                Monto: {user._amount}
+                Amount: {user._amount}
             </span>
             <button onClick={pagarExpensa}>
                 Pay Expenses
@@ -61,7 +61,7 @@ const SeccionUsuario = ({address}) => {
 
     if (user) {
         // TODO: ver que rol tiene este user
-        user.rol = "inquilino";
+        user.rol = "admin";
     }
    
     return (

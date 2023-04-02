@@ -14,6 +14,15 @@ button {
   
   button:hover {
     background-color: #0077B6;
+    color: white;
     cursor: pointer;
   
   }
+
+  .logout-button{
+    border-color: #919da9;
+    color: #425061;
+    background-color: #b3d0d6;
+    padding-left: 40px;
+    padding-right: 40px;
+}

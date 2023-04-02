@@ -4,7 +4,6 @@ import { InjectedConnector } from "wagmi/connectors/injected";
 import "./ConnectUser.css";
 
 const ConnectUser = ({ setEstaConectado, estaConectado, setAddressUser, setIsLoading }) => {
-  setIsLoading(true);
   const { disconnect } = useDisconnect();
   const { connect, data } = useConnect({
     connector: new InjectedConnector(),
@@ -16,12 +15,11 @@ const ConnectUser = ({ setEstaConectado, estaConectado, setAddressUser, setIsLoa
     console.log(data.account)
   } 
 
-  setIsLoading(false);
 
   return (
     <div>
       {estaConectado ? (
-        <button
+        <button className="logout-button"
           onClick={() => {
             disconnect();
             setEstaConectado(false);
